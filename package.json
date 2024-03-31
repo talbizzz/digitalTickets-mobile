@@ -1,0 +1,19 @@
+{
+  "name": "@digital-tickets-project/types",
+  "version": "1.0.0",
+  "description": "contains types that are common to the backend and frontend",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talbizzz/digitalTickets-types.git"
+  },
+  "author": "@talbizzz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talbizzz/digitalTickets-types/issues"
+  },
+  "homepage": "https://github.com/talbizzz/digitalTickets-types#readme"
+}
