@@ -1,7 +1,8 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import App from '../App';
 import {MainStack, MainStackParams} from './MainStack';
 import {AuthStack, AuthStackParams} from './AuthStack';
+import {useSelector} from 'react-redux';
+import {getLoggedIn} from '../store/slices/AppSlice';
 
 export type StackParams<T> = {screen: keyof T; params: T[keyof T]};
 
@@ -12,14 +13,18 @@ export type AppStackParams = {
 
 const Stack = createNativeStackNavigator<AppStackParams>();
 
-const switchStack = () => {
-  if (false) {
-    return <Stack.Screen name="MainStack" component={MainStack} />;
-  }
-  return <Stack.Screen name="AuthStack" component={AuthStack} />;
-};
-
 export const AppStack = () => {
+  const loggedIn = useSelector(getLoggedIn);
+
+  console.log('loggedIn', loggedIn);
+
+  const switchStack = () => {
+    if (loggedIn) {
+      return <Stack.Screen name="MainStack" component={MainStack} />;
+    }
+    return <Stack.Screen name="AuthStack" component={AuthStack} />;
+  };
+
   return (
     <Stack.Navigator
       screenOptions={{
