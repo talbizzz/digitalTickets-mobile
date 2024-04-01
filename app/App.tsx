@@ -5,11 +5,15 @@ import {AppStack} from './navigation/AppStack';
 import {HomeScreen} from './features/home/HomeScreen';
 import {MainStack} from './navigation/MainStack';
 import {TabNavigator} from './navigation/TabNavigator';
+import {Provider} from 'react-redux';
+import store from './store/store';
 
 export default () => {
   return (
-    <NavigationContainer>
-      <AppStack />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <AppStack />
+      </NavigationContainer>
+    </Provider>
   );
 };
