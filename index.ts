@@ -1,7 +1,5 @@
-export type UserType = {
-  id: number;
-  name: string;
-  email: string;
-  phone: string;
-  website: string;
-};
+import { AppState } from "./ReduxStoreTypes/AppStateType";
+import { GlobalState } from "./ReduxStoreTypes/GlobalStateType";
+
+export type AppStateType = AppState;
+export type GlobalStateType = GlobalState;

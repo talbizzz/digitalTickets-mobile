@@ -1,10 +1,11 @@
 {
   "name": "@digital-tickets-project/types",
-  "version": "1.0.0",
+  "version": "1.0.13",
   "description": "contains types that are common to the backend and frontend",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "python3 update_version_and_publish.py"
   },
   "repository": {
     "type": "git",
