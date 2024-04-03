@@ -40,15 +40,9 @@
 
 https://github.com/software-mansion/react-native-svg/issues/2241#issuecomment-1985785641
 
-## Issue 2: [Issue Title]
+## Issue 2: SVG as a Generic component
 
-**Description:** [Brief description of the issue]
-
-**Symptoms:** [List of symptoms indicating the presence of the issue]
-
-**Possible Causes:** [List of possible causes for the issue]
-
-**Solution:** [Steps to resolve the issue]
+https://github.com/vinipachecov/rn-typescript-svg-setup?tab=readme-ov-file#svg-setup
 
 ## Issue 3: [Issue Title]
 

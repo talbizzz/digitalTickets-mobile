@@ -17,6 +17,7 @@ export const MainStack = () => {
         headerShown: false,
         // orientation: orientationUnlocked ? 'all' : 'portrait_up',
       }}>
+      <Stack.Screen name="TabNavigator" component={TabNavigator} />
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
     </Stack.Navigator>
   );

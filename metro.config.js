@@ -11,7 +11,8 @@ const defaultAssetExts =
  *
  * @type {import('metro-config').MetroConfig}
  */
-const config = {
+
+module.exports = mergeConfig(getDefaultConfig(__dirname), {
   transformer: {
     babelTransformerPath: require.resolve('react-native-svg-transformer'),
     getTransformOptions: async () => ({
@@ -25,6 +26,4 @@ const config = {
     assetExts: defaultAssetExts.filter(ext => ext !== 'svg'),
     sourceExts: [...defaultSourceExts, 'svg'],
   },
-};
-
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+});
