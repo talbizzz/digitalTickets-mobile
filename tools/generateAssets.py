@@ -84,7 +84,7 @@ output += (
     importSection + "\n\n" + typeSection + "; " + "\n\n" + svgObject + "};" + "\n\n"
 )
 
-output += "type Props = { name: SVGName;primaryColor?: string;secondaryColor?: string; } & SvgProps;\n\n export const IconSVG = (props: Props) => {const {name, primaryColor, secondaryColor} = props; const Icon = svgs[name]; return ( <Icon {...props} primary={primaryColor ?? colors.primary} secondary={secondaryColor ?? colors.medium} />);};"
+output += "type Props = { name: SVGName;color?: string;size?:number } & SvgProps;\n\n export const IconSVG = (props: Props) => {const {name, color, size} = props; const Icon = svgs[name]; return ( <Icon {...props} fill={color ?? colors.primary} width={size ?? 24} height={size ?? 24}/>);};"
 print(output)
 f = open(target, "w")
 f.write(output)

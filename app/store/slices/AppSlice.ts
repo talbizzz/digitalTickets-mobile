@@ -2,7 +2,7 @@ import {createSelector, createSlice} from '@reduxjs/toolkit';
 import {AppStateType, GlobalStateType} from '@digital-tickets-project/types';
 
 const initialState: AppStateType = {
-  loggedIn: false,
+  loggedIn: true,
 };
 
 export const appSlice = createSlice({
@@ -17,7 +17,7 @@ export const appSlice = createSlice({
 
 export const getLoggedIn = createSelector(
   (state: GlobalStateType) => state.appSlice.loggedIn,
-  loggedIn => loggedIn,
+  loggedIn => loggedIn === true,
 );
 
 export const {setLoggedIn} = appSlice.actions;
